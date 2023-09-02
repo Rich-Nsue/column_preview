@@ -1,0 +1,150 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    --Brightorange: hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan: hsl(179, 100%, 13%);
+
+
+    --Transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --Verylightgray: hsl(0, 0%, 95%);
+
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--Verylightgray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 88px 0;
+}
+
+
+#header__main {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards__main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.Sedans__cards {
+    background: var(--Brightorange);
+    border-radius: 10px 10px 0 0;
+}
+
+.SUVs__cards {
+    background: var(--Darkcyan);
+}
+
+.luxury__cards {
+    background: var(--Verydarkcyan);
+    border-radius: 0 0 10px 10px;
+}
+
+.card {
+    width: 330px;
+    height: 442px;
+}
+
+
+.image__card {
+    padding-left: 48px;
+    padding-top: 48px;
+}
+
+.card h1 {
+    font-size: 38px;
+    text-transform: uppercase;
+    color: var(--Verylightgray);
+    padding-top: 30px;
+    padding-left:  48px;
+}
+
+.card p {
+    color: var(--Transparentwhite);
+    font-weight: 400px;
+    padding: 30px 48px 0 48px;
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+.card button {
+    background: var(--Verylightgray);
+    border: none;
+    border-radius: 50px;
+    width: 150px;
+    height: 50px;
+    margin: 20px 48px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.Sedans__cards button {
+    color: var(--Brightorange);
+}
+
+.SUVs__cards button {
+    color: var(--Darkcyan);
+}
+
+.luxury__cards button {
+    color: var(--Verydarkcyan);
+}
+
+
+
+
+@media (min-width: 768px) {
+    .cards__main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .Sedans__cards {
+        border-radius: 0;
+    }
+    
+    
+    .luxury__cards {
+        border-radius: 0;
+    }
+    
+    
+}
+
+
+@media (min-width: 1280px) {
+    .cards__main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .Sedans__cards {
+        border-radius: 0;
+    }
+    
+    
+    .luxury__cards {
+        border-radius: 0;
+    }
+
+    .card button:hover{
+        background: none;
+        border: 2px solid var(--Verylightgray);
+        color: white;
+        cursor: pointer;
+        
+        
+    }
+
+}
